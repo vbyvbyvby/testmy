@@ -3,9 +3,7 @@ import { client } from "./client";
 import { useState, useEffect } from "react";
 import Movies from "./components/Movies";
 
-
-
-const IndexPage = () => {
+export default function App() {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
@@ -17,12 +15,10 @@ const IndexPage = () => {
       })
       .catch(console.error);
   });
-  
+
   return (
-    <Movies movies={movies} />
-  )
+    <div className="App">
+      <Movies movies={movies} />
+    </div>
+  );
 }
-
-export default IndexPage
-
-export const Head = () => <title>Home Page</title>
