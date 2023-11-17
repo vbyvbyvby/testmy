@@ -1,4 +1,3 @@
-import * as React from "react"
 import * as contentful from 'contentful'
 
 export const client = contentful.createClient({
