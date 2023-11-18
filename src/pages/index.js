@@ -14,7 +14,7 @@ const IndexPage = () => {
         setMovies(response.items);
       })
       .catch(console.error);
-  });
+  }, []);
   
   return (
     <Movies movies={movies} />
